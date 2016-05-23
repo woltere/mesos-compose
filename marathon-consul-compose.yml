@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  marathon-consul:
+    build: marathon-consul-docker
+    dns:
+    -  192.168.99.100:8600
+    dns_search:
+    - service.consul
+    ports:
+    - "4000:4000"
